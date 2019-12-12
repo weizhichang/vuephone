@@ -9,6 +9,6 @@
   </div>
 </template>
 
-<style lang="less">
+<style scoped lang="less">
 
 </style>
