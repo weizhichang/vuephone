@@ -1,8 +1,15 @@
 <template>
 <div class="header">
-  <div class="header-left">返回</div>
-  <div class="header-input">内容</div>
-  <div class="header-right">城市</div>
+  <div class="header-left">
+    <span class="iconfont back-icon">&#xe624;</span>
+  </div>
+  <div class="header-input">
+    <span class="iconfont">&#xe632;</span>
+    输入城市/景点/游玩主题</div>
+  <div class="header-right">
+    城市
+   <span class="iconfont arrow-icon">&#xe64a;</span>
+  </div>
 </div>
 </template>
 
@@ -16,25 +23,41 @@ export default {
 
   .header{
     display:flex;
-    height:0.64rem;
-    line-height: 0.64rem;
-    background-color: #00bcd4;
+    height:.86rem;
+    line-height: .86rem;
+    background:@bgColor;
     color:#fff;
 
   .header-left{
-    width:10%;
+  width:.64rem;
+
+   .back-icon{
+      text-align: center;
+      font-size: .4rem;
+      padding-left: .1rem;
+    }
   }
 
   .header-input{
-      // flex: 1;
-      width: 80%;
+      flex: 1;
+      height: .64rem;
+      line-height: .64rem;
+      margin-top:.12rem;
+      margin-left: .2rem;
+      padding-left: .2rem;
       background-color:#fff;
-      border-radius: 1rem;
+      border-radius: .1rem;
+      color:#ccc;
     }
 
   .header-right{
-    width:10%;
+    width:1.24rem;
     text-align:center;
+
+    .arrow-icon{
+      font-size: .24rem;
+      margin-left: -0.05rem;
+    }
    }
   }
   

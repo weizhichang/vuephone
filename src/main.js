@@ -5,6 +5,8 @@ import store from './store'
 import './assets/styles/reset.css'
 import './assets/styles/border.css'
 import fastClick from 'fastclick'
+import './assets/styles/iconfont.css'
+import './assets/styles/variables.less'
 // import 'reset-css';
 
 Vue.config.productionTip = false
