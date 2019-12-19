@@ -35,7 +35,7 @@ export default {
    .back-icon{
       text-align: center;
       font-size: .4rem;
-      padding-left: .1rem;
+      padding-left: .2rem;
     }
   }
 
