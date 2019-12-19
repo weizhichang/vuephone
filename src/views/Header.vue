@@ -28,7 +28,7 @@ export default {
     line-height: .86rem;
     background:@bgColor;
     color:#fff;
-
+    
   .header-left{
   width:.64rem;
 
