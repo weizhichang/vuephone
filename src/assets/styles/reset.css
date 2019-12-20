@@ -28,3 +28,24 @@ a {color: #25a4bb;text-decoration: none;}
 .swiper-pagination-bullet-active {
     background-color: #ff4500;
 }
+
+.clrfix:after {
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+    content: ".";
+}
+
+@media screen and (max-width: 480px){
+body {
+    border-top: 0 !important;
+    font-family: "PingFangSC-Regular";
+
+}
+
+.dujia-body-right-bottom .body-right-bottom-words {
+
+
+}
+}

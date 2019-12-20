@@ -62,10 +62,10 @@ export default {
 
 // 设置宽高比
 .hm-icons{
-    overflow: hidden;
-    width:100%;
-    height: 0;
-    padding-bottom: 63%;
+    // overflow: hidden;
+    // width:100%;
+    // height: 0;
+    // padding-bottom: 66%;
     font-size: .24rem;
     margin:0.07rem auto;
     
@@ -80,6 +80,7 @@ export default {
            margin: 0.07rem 0;
 
            .hm-icon_img{
+               overflow: hidden;
                width: 70%;
                height: 0;
                padding-bottom: 68%;
