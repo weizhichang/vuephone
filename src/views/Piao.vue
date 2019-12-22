@@ -3,7 +3,12 @@
         <div class="hm-dujia-head">
             <div class="hm-title">
                 <span class="icon-hot-dujia"></span>
-                <h3>当季热门度假</h3>
+                <h3>当季景点门票</h3>
+            </div>
+            <div class="piao-more">
+                <a href="" class="piao-head-more-link">
+                    <span>更多特惠门票</span>
+                </a>
             </div>
         </div>
         <div class="hm-dujia-body">
@@ -12,20 +17,13 @@
                         <div class="dujia-body-right-img">
                             <img :src="item.src" alt="">
                         </div>
-                        <div class="dujia-body-right-title">
-                            <div class="dujia-body-right-title-in">
-                                <p class="right-title-main">
-                                    <span v-html="item.city"></span>
-                                </p>
-                                <p class="right-title-sub">
-                                    <span v-html="item.type"></span>
-                                </p>
-                            </div>
-                        </div>
                     </div>
                     <div class="dujia-body-right-bottm">
                         <p class="body-right-bottom-words">
                             <span v-html="item.detailtype"></span>
+                        </p>
+                        <p class="body-right-bottom-word">
+                            <span v-html="item.detail"></span>
                         </p>
                         <p class="dujia-body-right-market-price"></p>
                          <div class="dujia-body-right-price">
@@ -42,18 +40,16 @@
 
 <script>
 export default {
-    name:"HomeDujia",
+    name:"HomePiao",
     data:function(){
         return{
             dujia_info:[
-                {id:'1',src:require("../image/hm_dujia/sanya.jpg"),city:'广州-三亚',type:'5天跟团游',detailtype:'含往返飞机票(含税)+4晚住宿',right_price:'2390'},
-                {id:'2',src:require("../image/hm_dujia/lijiang.jpg"),city:'广州-丽江',type:'7天自由行',detailtype:'含往返飞机票+6晚住宿',right_price:'4294'},
-                {id:'3',src:require("../image/hm_dujia/guilin.jpg"),city:'广州-桂林',type:'10天跟团游',detailtype:'含单程飞机票(含税)+9晚住宿',right_price:'3000'},
-                {id:'4',src:require("../image/hm_dujia/xsqd.jpg"),city:'广州-西沙群岛',type:'6天跟团游',detailtype:'含往返飞机票(含税)+3晚住宿',right_price:'5540'},
-                {id:'5',src:require("../image/hm_dujia/hz.jpg"),city:'广州-惠州',type:'10天跟团游',detailtype:'含往返飞机票(含税)+8晚住宿',right_price:'11999'},
-                {id:'6',src:require("../image/hm_dujia/taiguo.jpg"),city:'广州-泰国',type:'6天跟团游',detailtype:'含往返飞机票(含税)+4晚住宿',right_price:'1680'},
-                {id:'7',src:require("../image/hm_dujia/jianpuzhai.jpg"),city:'广州-曼谷',type:'6天跟团游',detailtype:'含往返飞机票(含税)+5晚住宿',right_price:'1997'},
-                {id:'8',src:require("../image/hm_dujia/yangshuo.jpg"),city:'广州-阳朔',type:'4天跟团游',detailtype:'含往返飞机票(含税)+3晚住宿',right_price:'1299'},
+                {id:'1',src:require("../image/piao/cldj.jpg"),city:'',type:'',detailtype:'广州长隆旅游度假区',detail:'一站式旅游度假胜地，广东必游圣地',right_price:'88'},
+                {id:'2',src:require("../image/piao/clfn.jpg"),city:'',type:'',detailtype:'长隆飞鸟乐园',detail:'长隆飞鸟乐园，一个真正看鸟飞的地方',right_price:'88'},
+                {id:'3',src:require("../image/piao/clys.jpg"),city:'',type:'',detailtype:'长隆野生动物世界',detail:'熊猫三胞胎，与您共享欢乐时光',right_price:'262.2'},
+                {id:'4',src:require("../image/piao/dgh.png"),city:'',type:'',detailtype:'东莞海立方环游城',detail:'',right_price:'55'},
+                {id:'5',src:require("../image/piao/sjzc.png"),city:'',type:'',detailtype:'深圳野生动物园',detail:'放养式动物园让你和动物们“零距离”',right_price:'99.9'},
+                {id:'6',src:require("../image/piao/szys.jpg"),city:'',type:'',detailtype:'世界之窗',detail:'放养式动物园让你和动物们“零距离”',right_price:'85'},
             ]
         }
     }
@@ -88,6 +84,18 @@ export default {
           display: inline-block;
           margin-left: 0.28rem;
        }
+     }
+
+     .piao-more{
+          float: right;
+          line-height: 45px;
+          height: 45px
+          color#000;
+          margin-right: 15px;
+          font-weight: 100%;
+         .piao-hesd-more-link{
+
+         }
      }
     }
 // 图片链接
@@ -151,6 +159,13 @@ export default {
                
                .body-right-bottom-words{
                 line-height: 1.2;
+               .ellipse();
+               }
+
+               .body-right-bottom-word{
+                line-height: 1;
+                font-weight: 100;
+                color: #555;
                .ellipse();
                }
 

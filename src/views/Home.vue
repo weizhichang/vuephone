@@ -5,6 +5,7 @@
     <home-icons></home-icons>
     <home-swiper></home-swiper>
      <home-dujia></home-dujia>
+     <home-piao></home-piao>
   </div>
 </template>
 
@@ -13,6 +14,7 @@ import HomeHeader from './Header.vue'
 import HomeSwiper from './Swiper.vue'
 import HomeIcons from './Icons.vue'
 import HomeDujia from './Dujia.vue'
+import HomePiao from './Piao.vue'
 
 export default {
   name: 'home',
@@ -21,6 +23,7 @@ export default {
     HomeSwiper,
     HomeIcons,
     HomeDujia,
+    HomePiao,
   }
 }
 </script>
