@@ -19,5 +19,19 @@ module.exports = {
         preProcessor: 'less',
         patterns: [path.resolve(__dirname, "./src/assets/styles/variables.less")] // 引入全局样式变量
       }
+},
+
+// 配置axios
+devServer:{
+  proxy:{
+    '/api':{
+      target:'http://localhost:8080',
+      changeOrigin:true,
+      ws:true,
+      pathRewrite:{
+        '^/api':'/mock'
+      }
+    }
+  }
 }
   };

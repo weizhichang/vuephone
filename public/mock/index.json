@@ -1,0 +1,14 @@
+{
+    "ret":true,
+    "data":{
+        "city":"广州",
+        "dujia_info":[
+            {"id":"1","src":"../image/piao/cldj.jpg","city":"","type":"","detailtype":"广州长隆旅游度假区","detail":"一站式旅游度假胜地，广东必游圣地","right_price":"88"},
+            {"id":"2","src":"../image/piao/clfn.jpg","city":"","type":"","detailtype":"长隆飞鸟乐园","detail":"长隆飞鸟乐园，一个真正看鸟飞的地方","right_price":"88"},
+            {"id":"3","src":"../image/piao/clys.jpg","city":"","type":"","detailtype":"长隆野生动物世界","detail":"熊猫三胞胎，与您共享欢乐时光","right_price":"262.2"},
+            {"id":"4","src":"../image/piao/dgh.png","city":"","type":"","detailtype":"东莞海立方环游城","detail":"","right_price":"55"},
+            {"id":"5","src":"../image/piao/sjzc.png","city":"","type":"","detailtype":"深圳野生动物园","detail":"放养式动物园让你和动物们“零距离”","right_price":"99.9"},
+            {"id":"6","src":"../image/piao/szys.jpg","city":"","type":"","detailtype":"世界之窗","detail":"放养式动物园让你和动物们“零距离”","right_price":"85"}
+        ]
+    }
+}
