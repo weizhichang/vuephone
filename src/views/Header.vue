@@ -5,11 +5,14 @@
   </div>
   <div class="header-input">
     <span class="iconfont">&#xe632;</span>
-    输入城市/景点/游玩主题</div>
+    <input  class="search-input" type="text" name="search" placeholder="搜索目的地">
+    </div>
+    <router-link to='/city'>
   <div class="header-right">
     {{this.city}}
    <span class="iconfont arrow-icon">&#xe64a;</span>
   </div>
+  </router-link>
 </div>
 </template>
 
@@ -27,8 +30,8 @@ export default {
 
   .header{
     display:flex;
-    height:.86rem;
-    line-height: .86rem;
+    height:@headerheight;
+    line-height:@headerheight;
     background:@bgColor;
     color:#fff;
     
@@ -52,11 +55,21 @@ export default {
       background-color:#fff;
       border-radius: .1rem;
       color:#ccc;
+
+      .search-input{
+        width: 85%;
+        height: .62rem;
+        line-height: .62rem;
+        text-align: center;
+        border-radius: .06rem;
+        color:#ccc;
+      }
     }
 
   .header-right{
     width:1.24rem;
     text-align:center;
+    color:#fff;
 
     .arrow-icon{
       font-size: .24rem;
