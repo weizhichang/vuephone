@@ -1,8 +1,8 @@
 <template>
 <div class="wrapper">
-    <swiper :options="swiperOption">
+    <swiper :options="swiperOption" v-if="swiper_images.length">
     <!-- slides -->
-    <swiper-slide  v-for="item of images" :key="item.id">
+    <swiper-slide  v-for="item of swiper_images" :key="item.id">
         <img class="swiper-img" alt="" :src="item.src">
     </swiper-slide>
     <!-- Optional controls -->
@@ -14,6 +14,9 @@
 <script>
 export default {
     name:'HomeSwiper',
+    props:{
+        swiper_images:Array
+    },
     data:function(){
     return {
         swiperOption:{ 
@@ -21,14 +24,14 @@ export default {
             paginationClickable :true,
             autoplay : 5000,//可选选项，自动滑动
             loop : true,//可选选项，开启循环
-        },
-        images:[
-           {id:'001',src:require('../image/Swiper/swiper_1.jpg')},
-           {id:'002',src:require('../image/Swiper/swiper_2.jpg')},
-           {id:'003',src:require('../image/Swiper/swiper_3.jpg')},
-        ]
+        }
     }
- }
+ },
+  computed:{
+         show:function(){
+             return this.swiper_images.length
+         }
+     }
 }
 </script>
 

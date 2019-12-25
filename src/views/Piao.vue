@@ -11,8 +11,8 @@
                 </a>
             </div>
         </div>
-        <div class="hm-dujia-body">
-                <a href="" class="dujia-body-item" v-for="item of dujia_info" :key=item.id>
+        <div class="hm-dujia-body" v-if="piao_info.length">
+                <a href="" class="dujia-body-item" v-for="item of piao_info" :key=item.id>
                     <div class="dujia-body-right-top">
                         <div class="dujia-body-right-img">
                             <img :src="item.src" alt="">
@@ -41,18 +41,19 @@
 <script>
 export default {
     name:"HomePiao",
+    props:{
+        piao_info:Array
+    },
     data:function(){
         return{
-            dujia_info:[
-                {id:'1',src:require("../image/piao/cldj.jpg"),city:'',type:'',detailtype:'广州长隆旅游度假区',detail:'一站式旅游度假胜地，广东必游圣地',right_price:'88'},
-                {id:'2',src:require("../image/piao/clfn.jpg"),city:'',type:'',detailtype:'长隆飞鸟乐园',detail:'长隆飞鸟乐园，一个真正看鸟飞的地方',right_price:'88'},
-                {id:'3',src:require("../image/piao/clys.jpg"),city:'',type:'',detailtype:'长隆野生动物世界',detail:'熊猫三胞胎，与您共享欢乐时光',right_price:'262.2'},
-                {id:'4',src:require("../image/piao/dgh.png"),city:'',type:'',detailtype:'东莞海立方环游城',detail:'',right_price:'55'},
-                {id:'5',src:require("../image/piao/sjzc.png"),city:'',type:'',detailtype:'深圳野生动物园',detail:'放养式动物园让你和动物们“零距离”',right_price:'99.9'},
-                {id:'6',src:require("../image/piao/szys.jpg"),city:'',type:'',detailtype:'世界之窗',detail:'放养式动物园让你和动物们“零距离”',right_price:'85'},
-            ]
+            
         }
-    }
+    },
+     computed:{
+         show:function(){
+             return this.piao_info.length
+         }
+     }
 }
 </script>
 

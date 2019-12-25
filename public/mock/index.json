@@ -2,7 +2,44 @@
     "ret":true,
     "data":{
         "city":"广州",
-        "dujia_info":[
+        "icons_info":{ 
+            "icon_big":[
+                {"id":"1","src":"../image/hm_icons/hotel.png","name":"酒店"},
+                {"id":"2","src":"../image/hm_icons/flight.png","name":"机票"},
+                {"id":"3","src":"../image/hm_icons/package.png","name":"度假"},
+                {"id":"4","src":"../image/hm_icons/piao.png","name":"火车票"},
+                {"id":"5","src":"../image/hm_icons/train.png","name":"景点门票"}
+            ],
+            "icon_mid":[
+                {"id":"6","src":"../image/hm_icons/innBnb.png","name":"民宿客栈"},
+                {"id":"7","src":"../image/hm_icons/bargainflight.png","name":"低价机票"},
+                {"id":"8","src":"../image/hm_icons/group.png","name":"特惠酒店"},
+                {"id":"9","src":"../image/hm_icons/haiwai.png","name":"海外酒店"},
+                {"id":"10","src":"../image/hm_icons/oneday.png","name":"一日游"}
+            ],
+            "icon_sma":[
+                {"id":"11","src":"../image/hm_icons/bus.png","name":"汽车票船票"},
+                {"id":"12","src":"../image/hm_icons/tuan.png","name":"旅游团购"},
+                {"id":"13","src":"../image/hm_icons/freeTravel.png","name":"自由行"},
+                {"id":"14","src":"../image/hm_icons/car.png","name":"专车自驾"},
+                {"id":"15","src":"../image/hm_icons/aroundtravel.png","name":"周边短途"}
+            ]},
+            "swiper_images":[
+                {"id":"001","src":"../image/Swiper/swiper_1.jpg"},
+                {"id":"002","src":"../image/Swiper/swiper_2.jpg"},
+                {"id":"003","src":"../image/Swiper/swiper_3.jpg"}
+             ],
+            "dujia_info":[
+                {"id":"1","src":"../image/hm_dujia/sanya.jpg","city":"广州-三亚","type":"5天跟团游","detailtype":"含往返飞机票(含税)+4晚住宿","right_price":"2390"},
+                {"id":"2","src":"../image/hm_dujia/lijiang.jpg","city":"广州-丽江","type":"7天自由行","detailtype":"含往返飞机票+6晚住宿","right_price":"4294"},
+                {"id":"3","src":"../image/hm_dujia/guilin.jpg","city":"广州-桂林","type":"10天跟团游","detailtype":"含单程飞机票(含税)+9晚住宿","right_price":"3000"},
+                {"id":"4","src":"../image/hm_dujia/xsqd.jpg","city":"广州-西沙群岛","type":"6天跟团游","detailtype":"含往返飞机票(含税)+3晚住宿","right_price":"5540"},
+                {"id":"5","src":"../image/hm_dujia/hz.jpg","city":"广州-惠州","type":"10天跟团游","detailtype":"含往返飞机票(含税)+8晚住宿","right_price":"11999"},
+                {"id":"6","src":"../image/hm_dujia/taiguo.jpg","city":"广州-泰国","type":"6天跟团游","detailtype":"含往返飞机票(含税)+4晚住宿","right_price":"1680"},
+                {"id":"7","src":"../image/hm_dujia/jianpuzhai.jpg","city":"广州-曼谷","type":"6天跟团游","detailtype":"含往返飞机票(含税)+5晚住宿","right_price":"1997"},
+                {"id":"8","src":"../image/hm_dujia/yangshuo.jpg","city":"广州-阳朔","type":"4天跟团游","detailtype":"含往返飞机票(含税)+3晚住宿","right_price":"1299"}
+            ],
+        "piao_info":[
             {"id":"1","src":"../image/piao/cldj.jpg","city":"","type":"","detailtype":"广州长隆旅游度假区","detail":"一站式旅游度假胜地，广东必游圣地","right_price":"88"},
             {"id":"2","src":"../image/piao/clfn.jpg","city":"","type":"","detailtype":"长隆飞鸟乐园","detail":"长隆飞鸟乐园，一个真正看鸟飞的地方","right_price":"88"},
             {"id":"3","src":"../image/piao/clys.jpg","city":"","type":"","detailtype":"长隆野生动物世界","detail":"熊猫三胞胎，与您共享欢乐时光","right_price":"262.2"},

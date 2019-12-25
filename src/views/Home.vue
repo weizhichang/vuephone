@@ -2,10 +2,10 @@
   <div class="home">
     <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
     <home-header :city="city"></home-header>
-    <home-icons></home-icons>
-    <home-swiper></home-swiper>
-     <home-dujia></home-dujia>
-     <home-piao></home-piao>
+    <home-icons :icons_info="icons_info"></home-icons>
+    <home-swiper :swiper_images="swiper_images"></home-swiper>
+     <home-dujia :dujia_info="dujia_info"></home-dujia>
+     <home-piao :piao_info="piao_info"></home-piao>
   </div>
 </template>
 
@@ -28,7 +28,11 @@ export default {
   },
   data:function(){
     return{
-      city:''
+      city:'',
+      piao_info:[],
+      icons_info:{},
+      dujia_info:[],
+      swiper_images:[],
     }
   },
   methods:{
@@ -37,13 +41,18 @@ export default {
       .then(this.getHomeInfoSuncc)
     },
      getHomeInfoSuncc:function(res){
-       console.log(res);
+      //  console.log(res);
        res=res.data;
        if(res.ret&&res.data){
          const data = res.data
          this.city=res.data.city;
+         this.piao_info = data.piao_info;
+         this.icons_info=data.icons_info;
+         this.dujia_info=data.dujia_info;
+         this.swiper_images=data.swiper_images;
+        
        }
-       console.log(res);
+      //  console.log(this.icons_info);
      }
   },
   mounted(){

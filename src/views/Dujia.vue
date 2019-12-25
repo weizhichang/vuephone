@@ -43,18 +43,12 @@
 <script>
 export default {
     name:"HomeDujia",
+    props:{
+        dujia_info:Array
+    },
     data:function(){
         return{
-            dujia_info:[
-                {id:'1',src:require("../image/hm_dujia/sanya.jpg"),city:'广州-三亚',type:'5天跟团游',detailtype:'含往返飞机票(含税)+4晚住宿',right_price:'2390'},
-                {id:'2',src:require("../image/hm_dujia/lijiang.jpg"),city:'广州-丽江',type:'7天自由行',detailtype:'含往返飞机票+6晚住宿',right_price:'4294'},
-                {id:'3',src:require("../image/hm_dujia/guilin.jpg"),city:'广州-桂林',type:'10天跟团游',detailtype:'含单程飞机票(含税)+9晚住宿',right_price:'3000'},
-                {id:'4',src:require("../image/hm_dujia/xsqd.jpg"),city:'广州-西沙群岛',type:'6天跟团游',detailtype:'含往返飞机票(含税)+3晚住宿',right_price:'5540'},
-                {id:'5',src:require("../image/hm_dujia/hz.jpg"),city:'广州-惠州',type:'10天跟团游',detailtype:'含往返飞机票(含税)+8晚住宿',right_price:'11999'},
-                {id:'6',src:require("../image/hm_dujia/taiguo.jpg"),city:'广州-泰国',type:'6天跟团游',detailtype:'含往返飞机票(含税)+4晚住宿',right_price:'1680'},
-                {id:'7',src:require("../image/hm_dujia/jianpuzhai.jpg"),city:'广州-曼谷',type:'6天跟团游',detailtype:'含往返飞机票(含税)+5晚住宿',right_price:'1997'},
-                {id:'8',src:require("../image/hm_dujia/yangshuo.jpg"),city:'广州-阳朔',type:'4天跟团游',detailtype:'含往返飞机票(含税)+3晚住宿',right_price:'1299'},
-            ]
+            
         }
     }
 }
