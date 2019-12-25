@@ -1,13 +1,11 @@
 <template>
 <div class="header">
+    国内城市
     <router-link to="/">
   <div class="header-left">
     <span class="iconfont back-icon">&#xe624;</span>
   </div>
   </router-link>
-  <div class="header-input">
-    国内城市
-    </div>
 </div>
 </template>
 
@@ -22,36 +20,29 @@ export default {
 
 <style scoped lang="less">
 
-
-  .header{
-    display:flex;
+   .header{
+    position: relative;
+    overflow: hidden;
     height:@headerheight;
     line-height: @headerheight;
-    background:@bgColor;
+    text-align: center;
+    background:#00c5c3;
     color:#fff;
     
   .header-left{
+  position:absolute;
+  left: 0;
+  top: 0;
   width:.64rem;
+  text-align: center;
 
    .back-icon{
-      text-align: center;
       font-size: .4rem;
       padding-left: .2rem;
       color: #fff;
     }
   }
 
-  .header-input{
-      width: 100%;
-      height: .64rem;
-      line-height: .64rem;
-      margin-top:.12rem;
-      margin-left: .2rem;
-      padding-left: -0.2rem;
-      border-radius: .1rem;
-      color:#fff;
-      text-align: center;
-    }
   }
-  
+    
 </style>

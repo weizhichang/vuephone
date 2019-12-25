@@ -62,7 +62,11 @@ export default {
         line-height: .62rem;
         text-align: center;
         border-radius: .06rem;
-        color:#ccc;
+        
+        input:-webkit-input-placeholder{
+            color:#ccc;
+            font-family: "PingFangSC-Regular";
+      }
       }
     }
 
