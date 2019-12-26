@@ -6,75 +6,23 @@
        <div class="title border-topbottom">当前城市</div>
        <div class="button-list">
            <div class="button-wrapper">
-           <div class="button">北京</div>
+           <div class="button">{{}}北京</div>
            </div>
        </div>
    </div>
    <div class="area">
         <div class="title border-topbottom">热门城市</div>
        <div class="button-list">
-           <div class="button-wrapper">
-           <div class="button">北京</div>
+           <div class="button-wrapper"  v-for="(item,index) of hotcity_info" :key=index>
+           <div class="button">{{item.name}}</div>
            </div>
-         <!-- chongfu -->
-           <div class="button-wrapper">
-           <div class="button">北京</div>
-           </div>
-           <div class="button-wrapper">
-           <div class="button">北京</div>
-           </div>
-           <div class="button-wrapper">
-           <div class="button">北京</div>
-           </div>
-           <div class="button-wrapper">
-           <div class="button">北京</div>
-           </div>
-           <!-- chongfu -->
        </div>
    </div>
-   <div class="area">
-       <div class="title border-topbottom">A</div>
-       <ul class="item-list">
-           <li class="item border-bottom">阿布布</li>
-           <li class="item border-bottom">阿布布</li>
-           <li class="item border-bottom">阿布布</li>
-           <li class="item border-bottom">阿布布</li>
-           <li class="item border-bottom">阿布布</li>
+   <div class="area" v-for="(value,name) of cities" :key=name>
+       <div class="title border-topbottom">{{name}}</div>
+       <ul class="item-list" v-for="item of value" :key=item.id>
+           <li class="item border-bottom" >{{item.name}}</li>
        </ul>
- <!-- chongfu -->
-       <div class="title border-topbottom">A</div>
-       <div class="item-list">
-           <div class="item border-bottom">阿布布</div>
-           <div class="item border-bottom">阿布布</div>
-           <div class="item border-bottom">阿布布</div>
-           <div class="item border-bottom">阿布布</div>
-           <div class="item border-bottom">阿布布</div>
-       </div>
-       <div class="title border-topbottom">A</div>
-       <div class="item-list">
-           <div class="item border-bottom">阿布布</div>
-           <div class="item border-bottom">阿布布</div>
-           <div class="item border-bottom">阿布布</div>
-           <div class="item border-bottom">阿布布</div>
-           <div class="item border-bottom">阿布布</div>
-       </div>
-       <div class="title border-topbottom">A</div>
-       <div class="item-list">
-           <div class="item border-bottom">阿布布</div>
-           <div class="item border-bottom">阿布布</div>
-           <div class="item border-bottom">阿布布</div>
-           <div class="item border-bottom">阿布布</div>
-           <div class="item border-bottom">阿布布</div>
-       </div>
-       <div class="title border-topbottom">A</div>
-       <div class="item-list">
-           <div class="item border-bottom">阿布布</div>
-           <div class="item border-bottom">阿布布</div>
-           <div class="item border-bottom">阿布布</div>
-           <div class="item border-bottom">阿布布</div>
-           <div class="item border-bottom">阿布布</div>
-       </div>
-       <!-- chongfu -->
    </div>
    </div>
 
@@ -86,7 +34,8 @@ import BScroll from 'better-scroll'
 export default {
   name: 'CityList',
   props:{
-    city:String
+    hotcity_info:Array,
+    cities:Object,
   },
   mounted(){
    this.scroll=new BScroll(this.$refs.wrapper)
