@@ -26,7 +26,7 @@ export default {
     height:@headerheight;
     line-height: @headerheight;
     text-align: center;
-    background:#00c5c3;
+    background:@bgColor;
     color:#fff;
     
   .header-left{

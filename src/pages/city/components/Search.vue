@@ -18,7 +18,7 @@ export default {
 .search{
     height:@headerheight;
     line-height: @headerheight;
-    background:#00c5c3;
+    background:@bgColor;
     color:#fff;
     position: relative;
 

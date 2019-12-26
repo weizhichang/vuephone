@@ -47,6 +47,7 @@ export default {
 
   .header-input{
       flex: 1;
+      position: relative;
       height: .64rem;
       line-height: .64rem;
       margin-top:.12rem;
@@ -56,12 +57,28 @@ export default {
       border-radius: .1rem;
       color:#ccc;
 
+      .iconfont{
+       position: absolute;
+       margin: auto;
+       top:0;
+       left:0;
+       z-index: 1;
+       padding-left: .2rem;
+       width: .64rem;
+      }
       .search-input{
-        width: 85%;
+        width: 100%;
         height: .62rem;
         line-height: .62rem;
         text-align: center;
         border-radius: .06rem;
+        position: absolute;
+        margin: auto;
+        top:0;
+        left:0;
+        bottom:0;
+        right:0;
+
         
         input:-webkit-input-placeholder{
             color:#ccc;
