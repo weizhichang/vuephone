@@ -29,6 +29,7 @@ export default {
     background:@bgColor;
     color:#fff;
     
+    
   .header-left{
   position:absolute;
   left: 0;

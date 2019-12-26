@@ -1,5 +1,7 @@
 <template>
-<div class="list">
+<div class="list" ref="wrapper">
+
+  <div>
    <div class="area">
        <div class="title border-topbottom">当前城市</div>
        <div class="button-list">
@@ -9,7 +11,7 @@
        </div>
    </div>
    <div class="area">
-        <div class="title border-topbottom">当前城市</div>
+        <div class="title border-topbottom">热门城市</div>
        <div class="button-list">
            <div class="button-wrapper">
            <div class="button">北京</div>
@@ -32,13 +34,13 @@
    </div>
    <div class="area">
        <div class="title border-topbottom">A</div>
-       <div class="item-list">
-           <div class="item border-bottom">阿布布</div>
-           <div class="item border-bottom">阿布布</div>
-           <div class="item border-bottom">阿布布</div>
-           <div class="item border-bottom">阿布布</div>
-           <div class="item border-bottom">阿布布</div>
-       </div>
+       <ul class="item-list">
+           <li class="item border-bottom">阿布布</li>
+           <li class="item border-bottom">阿布布</li>
+           <li class="item border-bottom">阿布布</li>
+           <li class="item border-bottom">阿布布</li>
+           <li class="item border-bottom">阿布布</li>
+       </ul>
  <!-- chongfu -->
        <div class="title border-topbottom">A</div>
        <div class="item-list">
@@ -74,22 +76,35 @@
        </div>
        <!-- chongfu -->
    </div>
+   </div>
+
 </div>
 </template>
 
 <script>
+import BScroll from 'better-scroll'
 export default {
   name: 'CityList',
   props:{
     city:String
-  }
-}
+  },
+  mounted(){
+   this.scroll=new BScroll(this.$refs.wrapper)
+}}
 </script>
 
 <style scoped lang="less">
 
+.list{
+    overflow: hidden;
+    position: absolute;
+    top: 1.68rem;
+    left:0;
+    right: 0;
+    bottom: 0;
+
   .title{
-   line-height: .4rem;
+   line-height: .54rem;
    background:#eee;
    padding-left: .2rem;
    color:#666;
@@ -131,5 +146,7 @@ export default {
       line-height: .76rem;
       color:#666;
       padding-left: .2rem;
+  }
+
   }
 </style>
