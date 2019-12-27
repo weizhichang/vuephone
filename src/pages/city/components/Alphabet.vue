@@ -1,6 +1,6 @@
 <template>
 <ul class="list" >
-   <li class="item" v-for="(value,name) of cities" :key=name>{{name}}</li>
+   <li class="item" v-for="(value,name) of cities" :key=name @click="handleClick">{{name}}</li>
 </ul>
 </template>
 
@@ -9,6 +9,12 @@ export default {
   name: 'CityAlphabet',
   props:{
     cities:Object
+  },
+  methods:{
+    handleClick:function(e){
+
+      console.log(e.target.innerText);//？？？
+    }
   }
 }
 </script>
