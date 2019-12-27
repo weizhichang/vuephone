@@ -4,8 +4,8 @@
 <city-header></city-header>
 <city-search></city-search>
 </div>
-<city-list :hotcity_info="hotcity_info" :cities="cities"></city-list>
-<city-alphabet :cities="cities"></city-alphabet>
+<city-list :hotcity_info="hotcity_info" :cities="cities" :letter="letter"></city-list>
+<city-alphabet :cities="cities" @change="handleChange"></city-alphabet>
 </div>
 </template>
 
@@ -28,6 +28,7 @@ export default {
     return{
       hotcity_info:[],
       cities:{},
+      letter:'',
     }
   },
     methods:{
@@ -41,10 +42,12 @@ export default {
        if(res.ret&&res.data){
          const data = res.data
          this.hotcity_info=res.data.hotcity_info;
-         this.cities=res.data.cities;
-        
+         this.cities=res.data.cities; 
        }
       //  console.log(this.icons_info);
+     },
+     handleChange(letter){
+       this.letter=letter;
      }
   },
   mounted(){

@@ -8,12 +8,13 @@
 export default {
   name: 'CityAlphabet',
   props:{
-    cities:Object
+    cities:Object,
+    letter:String 
   },
   methods:{
     handleClick:function(e){
-
-      console.log(e.target.innerText);//？？？
+      this.$emit('change',e.target.innerText);
+     //e为原生DOM事件
     }
   }
 }
