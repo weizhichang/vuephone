@@ -1,7 +1,9 @@
 <template>
 <div>
+ <div class="bg">
 <city-header></city-header>
 <city-search></city-search>
+</div>
 <city-list :hotcity_info="hotcity_info" :cities="cities"></city-list>
 <city-alphabet :cities="cities"></city-alphabet>
 </div>
@@ -53,5 +55,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="less">
-
+.bg{
+  background:@bgColor;
+}
 </style>
