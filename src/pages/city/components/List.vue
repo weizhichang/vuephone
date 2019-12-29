@@ -5,7 +5,7 @@
        <div class="title border-topbottom">当前城市</div>
        <div class="button-list">
            <div class="button-wrapper">
-           <div class="button">{{}}北京</div>
+           <div class="button">{{locationcity}}</div>
            </div>
        </div>
    </div>
@@ -13,14 +13,16 @@
         <div class="title border-topbottom">热门城市</div>
        <div class="button-list">
            <div class="button-wrapper"  v-for="(item,index) of hotcity_info" :key=index>
-           <div class="button">{{item.name}}</div>
+           <div class="button"  @click="handleclick(item.name)">{{item.name}}</div>
            </div>
        </div>
    </div>
    <div class="area" v-for="(value,name) of cities" :key=name :ref="name">
        <div class="title border-topbottom">{{name}}</div>
-       <ul class="item-list" v-for="item of value" :key=item.id>
-           <li class="item border-bottom" >{{item.name}}</li>
+       <ul class="item-list" >
+           <li class="item border-bottom" v-for="item of value" :key=item.id
+            @click="handleclick(item.name)"
+           >{{item.name}}</li>
        </ul>
    </div>
    </div>
@@ -35,6 +37,18 @@ export default {
     hotcity_info:Array,
     cities:Object,
     letter:String
+  },
+  methods:{
+    handleclick(n){
+      this.$store.commit('mutationscity',n);
+    //  console.log(n)
+    this.$router.push('/');//跳转回home页面
+    }
+  },
+   computed:{
+    locationcity(){
+      return this.$store.state.city
+    }
   },
   mounted(){
    this.scroll=new BScroll(this.$refs.wrapper)

@@ -1,7 +1,6 @@
 {
     "ret":true,
     "data":{
-        "city":"广州",
         "icons_info":{ 
             "icon_big":[
                 {"id":"1","src":"../image/hm_icons/hotel.png","name":"酒店"},

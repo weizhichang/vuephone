@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
-    <home-header :city="city"></home-header>
+    <home-header></home-header>
     <home-icons :icons_info="icons_info"></home-icons>
     <home-swiper :swiper_images="swiper_images"></home-swiper>
      <home-dujia :dujia_info="dujia_info"></home-dujia>
@@ -28,7 +28,6 @@ export default {
   },
   data:function(){
     return{
-      city:'',
       piao_info:[],
       icons_info:{},
       dujia_info:[],
@@ -45,7 +44,6 @@ export default {
        res=res.data;
        if(res.ret&&res.data){
          const data = res.data
-         this.city=res.data.city;
          this.piao_info = data.piao_info;
          this.icons_info=data.icons_info;
          this.dujia_info=data.dujia_info;

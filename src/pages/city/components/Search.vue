@@ -6,7 +6,9 @@
 </div>
 <div class="search-content" v-show="keyword" ref="search">
   <ul class="item-list">
-    <li class="border-bottom" v-for="item of list" :key=item.index>{{item.name}}</li>
+    <li class="border-bottom" v-for="item of list" :key=item.index
+    @click="handleclick(item.name)"
+    >{{item.name}}</li>
     <li class="border-bottom" v-show="noresult">无法查询到该城市</li>
   </ul>
 </div>
@@ -40,6 +42,11 @@ export default {
       this.placeholder='输入城市名或拼音';
       console.log(this.placeholder);
       },
+      handleclick(n){
+      this.$store.commit('mutationscity',n);
+    //  console.log(n)
+    this.$router.push('/');
+    }
   },
   computed:{
        noresult:function(){

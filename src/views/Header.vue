@@ -5,11 +5,12 @@
   </div>
   <div class="header-input">
     <span class="iconfont">&#xe632;</span>
-    <input  class="search-input" type="text" name="search" placeholder="搜索目的地">
+    <input  class="search-input" type="text" name="search" placeholder="搜索目的地"
+    onfocus="this.placeholder=''" onblur="this.placeholder='搜索目的地';">
     </div>
     <router-link to='/city'>
   <div class="header-right">
-    {{this.city}}
+    {{locationcity}}
    <span class="iconfont arrow-icon">&#xe64a;</span>
   </div>
   </router-link>
@@ -21,6 +22,11 @@ export default {
   name: 'HomeHeader',
   props:{
     city:String
+  },
+  computed:{
+    locationcity(){
+      return this.$store.state.city
+    }
   }
 }
 </script>
