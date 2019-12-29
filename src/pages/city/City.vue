@@ -2,7 +2,7 @@
 <div>
  <div class="bg">
 <city-header></city-header>
-<city-search></city-search>
+<city-search :cities="cities"></city-search>
 </div>
 <city-list :hotcity_info="hotcity_info" :cities="cities" :letter="letter"></city-list>
 <city-alphabet :cities="cities" @change="handleChange"></city-alphabet>
@@ -51,7 +51,7 @@ export default {
      }
   },
   mounted(){
-    this.getCityInfo()
+    this.getCityInfo();
   },
 }
 </script>

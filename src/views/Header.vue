@@ -66,6 +66,7 @@ export default {
        padding-left: .2rem;
        width: .64rem;
       }
+
       .search-input{
         width: 100%;
         height: .62rem;
@@ -78,13 +79,8 @@ export default {
         left:0;
         bottom:0;
         right:0;
-
-        
-        input:-webkit-input-placeholder{
-            color:#ccc;
-            font-family: "PingFangSC-Regular";
       }
-      }
+      .search-input-text
     }
 
   .header-right{

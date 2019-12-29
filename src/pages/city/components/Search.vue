@@ -1,6 +1,14 @@
 <template>
+<div>
 <div class="search">
-   <input type="text" class="search-input" placeholder="输入城市名或拼音">
+   <input type="text" class="search-input"  v-model="keyword"  placeholder="输入城市名或拼音"
+   onfocus="this.placeholder='';" onblur="this.placeholder='输入城市名或拼音';">
+</div>
+<div class="search-content">
+  <ul class="item-list">
+    <li class="border-bottom" v-for="item of list" :key=item.index>{{item.name}}</li>
+  </ul>
+</div>
 </div>
 </template>
 
@@ -8,8 +16,46 @@
 export default {
   name: 'CitySearch',
   props:{
-    city:String
-  }
+    cities:Object
+  },
+  data:function(){
+    return{
+      keyword:'',
+      list:[],
+      timer:null
+    }
+  },
+  methods:{
+      onFocus:function(){
+      this.placeholder='';
+      console.log(1);
+      },
+      placeHolder:function(){
+      this.placeholder='输入城市名或拼音';
+      console.log(this.placeholder);
+      }
+  },
+  watch:{
+    keyword:function() {
+       if(this.keyword){
+       if(this.timer){
+         clearTimeout(this.timer)
+       }
+       this.timer = setTimeout(()=>{
+         const result=[]
+         for(let i in this.cities){
+           this.cities[i].forEach((value)=>{
+             if(value.spell.indexOf(this.keyword) > -1 ||value.name.indexOf(this.keyword) > -1 ){
+               result.push(value)
+             } 
+           })
+         }
+         this.list = result
+         },100)
+       }else
+         {this.list =[];}//如果输入值为空，则清空list数组
+      } 
+    }
 }
 </script>
 
@@ -36,10 +82,29 @@ export default {
       bottom:0;
       right:0;
 
-      input:-webkit-input-placeholder{
-            color:#ccc;
-            font-family: "PingFangSC-Regular";
+    }
+     .search-input-text
+  }
+
+  .search-content{
+    overflow: hidden;
+    position:absolute;
+    top:1.69rem;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    background: #fff;
+
+    .item-list{
+      line-height: .76rem;
+      color:#666;
+      padding-left: .2rem;
+
+     .border-bottom{
+       &:before{
+    border-color:#ccc;
       }
+  }
     }
   }
 

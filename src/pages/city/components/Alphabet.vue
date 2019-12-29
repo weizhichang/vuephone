@@ -1,6 +1,11 @@
 <template>
 <ul class="list" >
-   <li class="item" v-for="(value,name) of cities" :key=name @click="handleClick">{{name}}</li>
+   <li class="item" v-for="item of letters" :key=item :ref="item"
+   @click="handleClick"
+   @touchstart="handleTouchStart"
+   @touchmove="handleTouchMove"
+   @touchend="handleTouchEnd"
+   >{{item}}</li>
 </ul>
 </template>
 
@@ -9,14 +14,40 @@ export default {
   name: 'CityAlphabet',
   props:{
     cities:Object,
-    letter:String 
+
+  },
+  computed:{
+    letters:function(){
+         const letters = []
+         for(let i in this.cities){
+           letters.push(i)
+         }
+         return letters
+    }
+  },
+  data:function(){
+    return{
+       touchStatus:false
+    }
   },
   methods:{
     handleClick:function(e){
       this.$emit('change',e.target.innerText);
      //e为原生DOM事件
+    },
+    handleTouchStart:function(){
+      this.touchStatus = true;
+    },
+    handleTouchMove:function(){
+       if(this.touchStatus){
+       const startY = this.$refs['A'][0].offsetTop;
+       console.log(startY);//为什么没反应？？？
+      }
+    },
+    handleTouchEnd:function(){
+       this.touchStatus = false;
     }
-  }
+      }
 }
 </script>
 

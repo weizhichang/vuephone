@@ -59,7 +59,7 @@ watch:{
 .list{
     overflow: hidden;
     position: absolute;
-    top: 1.68rem;
+    top: 1.70rem;
     left:0;
     right: 0;
     bottom: 0;
