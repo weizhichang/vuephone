@@ -1,6 +1,5 @@
 <template>
 <div class="list" ref="wrapper">
-
   <div>
    <div class="area">
        <div class="title border-topbottom">当前城市</div>
@@ -25,7 +24,6 @@
        </ul>
    </div>
    </div>
-
 </div>
 </template>
 

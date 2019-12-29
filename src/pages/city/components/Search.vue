@@ -2,17 +2,20 @@
 <div>
 <div class="search">
    <input type="text" class="search-input"  v-model="keyword"  placeholder="输入城市名或拼音"
-   onfocus="this.placeholder='';" onblur="this.placeholder='输入城市名或拼音';">
+   onfocus="this.placeholder=''" onblur="this.placeholder='输入城市名或拼音';">
 </div>
-<div class="search-content">
+<div class="search-content" v-show="keyword" ref="search">
   <ul class="item-list">
     <li class="border-bottom" v-for="item of list" :key=item.index>{{item.name}}</li>
+    <li class="border-bottom" v-show="noresult">无法查询到该城市</li>
   </ul>
 </div>
 </div>
 </template>
 
 <script>
+import BScroll from 'better-scroll'
+
 export default {
   name: 'CitySearch',
   props:{
@@ -22,9 +25,12 @@ export default {
     return{
       keyword:'',
       list:[],
-      timer:null
+      timer:null,
     }
   },
+  mounted(){
+   this.scroll=new BScroll(this.$refs.search)
+},
   methods:{
       onFocus:function(){
       this.placeholder='';
@@ -33,6 +39,11 @@ export default {
       placeHolder:function(){
       this.placeholder='输入城市名或拼音';
       console.log(this.placeholder);
+      },
+  },
+  computed:{
+       noresult:function(){
+        return  !this.list.length
       }
   },
   watch:{
@@ -92,13 +103,16 @@ export default {
     top:1.69rem;
     left: 0;
     right: 0;
+    bottom: 0;
     z-index: 1;
-    background: #fff;
+    background: #eee;
+
 
     .item-list{
       line-height: .76rem;
       color:#666;
       padding-left: .2rem;
+      background: #fff;
 
      .border-bottom{
        &:before{
