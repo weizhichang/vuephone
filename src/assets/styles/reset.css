@@ -49,3 +49,9 @@ body {
 
 }
 }
+
+.mpg-flexbox-item.mp-border-left.mp-flexlink-con::before {
+    top: 0;
+    width: 1px;
+    height: 100%;
+  }

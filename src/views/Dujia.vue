@@ -7,7 +7,7 @@
             </div>
         </div>
         <div class="hm-dujia-body">
-                <a href="" class="dujia-body-item" v-for="item of dujia_info" :key=item.id>
+                <router-link to="/detail"  class="dujia-body-item" v-for="item of dujia_info" :key=item.id>
                     <div class="dujia-body-right-top">
                         <div class="dujia-body-right-img">
                             <img :src="item.src" alt="">
@@ -35,7 +35,7 @@
                              <span v-html="item.right_price"></span>
                          </div>
                     </div>
-                </a>
+               </router-link> 
      </div>
     </div>
 </template>

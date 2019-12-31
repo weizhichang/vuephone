@@ -6,11 +6,32 @@
   "description": "项目图标",
   "glyphs": [
     {
+      "icon_id": "551965",
+      "name": "箭头",
+      "font_class": "arrow-right-copy-copy",
+      "unicode": "e603",
+      "unicode_decimal": 58883
+    },
+    {
       "icon_id": "566360",
       "name": "箭头",
       "font_class": "jiantou",
       "unicode": "e64a",
       "unicode_decimal": 58954
+    },
+    {
+      "icon_id": "608359",
+      "name": "箭头",
+      "font_class": "jiantouarrow494",
+      "unicode": "e6b2",
+      "unicode_decimal": 59058
+    },
+    {
+      "icon_id": "1903846",
+      "name": "web__箭头_上",
+      "font_class": "web__jiantou_shang",
+      "unicode": "e640",
+      "unicode_decimal": 58944
     },
     {
       "icon_id": "2674472",
@@ -25,6 +46,41 @@
       "font_class": "sousuo",
       "unicode": "e632",
       "unicode_decimal": 58930
+    },
+    {
+      "icon_id": "2742673",
+      "name": "图片",
+      "font_class": "tupian",
+      "unicode": "e67b",
+      "unicode_decimal": 59003
+    },
+    {
+      "icon_id": "5184459",
+      "name": "箭头-上",
+      "font_class": "jiantou-shang",
+      "unicode": "e62c",
+      "unicode_decimal": 58924
+    },
+    {
+      "icon_id": "6275359",
+      "name": "定位",
+      "font_class": "icon-test",
+      "unicode": "e61b",
+      "unicode_decimal": 58907
+    },
+    {
+      "icon_id": "8652814",
+      "name": "喇叭",
+      "font_class": "laba",
+      "unicode": "e646",
+      "unicode_decimal": 58950
+    },
+    {
+      "icon_id": "10621577",
+      "name": "喇叭",
+      "font_class": "laba1",
+      "unicode": "e656",
+      "unicode_decimal": 58966
     }
   ]
 }

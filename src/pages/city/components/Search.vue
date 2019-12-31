@@ -45,7 +45,7 @@ export default {
       handleclick(n){
       this.$store.commit('mutationscity',n);
     //  console.log(n)
-    this.$router.push('/');
+    this.$router.push('/');//跳转回home页面
     }
   },
   computed:{
